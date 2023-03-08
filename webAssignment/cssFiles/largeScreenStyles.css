@@ -1,0 +1,435 @@
+:root {
+    --text_A: rgb(49,68,49);
+    --text_A_translucent: rgba(61, 159, 204, 0.85);
+    --bkgrd_A: rgba(61, 159, 204, 0.2);
+    --greyed_out: rgba(0,0,0,0.3);
+    --header_ctrl: rgb(255, 255, 36);
+    --bkgrd_main: rgb(192, 0, 118);
+    --slight_grey: rgba(255, 255, 255, 0.904);
+    --flat_blue: rgb(45, 149, 180);
+}
+
+
+#wrapper {
+    background-color: var(--bkgrd_main);
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
+/*
+Identical to mobile styling
+*/
+
+header {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding: 0.5em 3%;
+    background-color: var(--header_ctrl);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h1 a{
+  text-decoration: none;
+  color: black;
+}
+
+header img {
+  width: 10%;
+}
+
+
+
+/*
+Flex direction is changed to row, and flex wrap is changed to nowrap from mobile.
+
+Some font size changes exclusive to desktop to make it larger and more readable.
+
+Aside is also reduced in size and a margin is added to blend better with the rest of the page.
+*/
+
+main {
+  overflow: hidden;
+  margin: 0;
+  padding: 0.5rem 3%;
+  background-color: var(--bkgrd_main);
+  display: flex;
+  flex-flow: row nowrap;
+  color: var(--slight_grey);
+}
+
+main h1 {
+  font-size: 1.5em;
+  padding: 0 3%;
+}
+
+main h2 {
+  font-size: 1.4em;
+  padding: 0 3%;
+}
+
+main p {
+    padding: 0 3%;
+}
+
+main img {
+  max-width: 30%;
+  margin-left: 35%;
+}
+
+main .homePage p {
+  font-size: 1.3em;
+}
+
+main .homePage h1 {
+  font-size: 1.8em;
+}
+
+main .homePage h2 {
+  font-size: 1.5em;
+}
+
+main aside {
+  background-color: var(--greyed_out);
+  font-size: 0.8em;
+  width: 50%;
+  margin-left: 20%;
+  padding: 1%;
+}
+
+main aside p {
+  margin-left: 0%;
+}
+
+
+
+/*
+Class 'mainAside' is altered to a set pixel width so it has no issues with the elements inside not fitting
+as the page moves. Additionally, some margin and padding changes are made.
+
+The rest of the changes are just to make sure the content in the main sidebar keep it consistent with design 
+decisions in the design document. 
+*/
+
+aside .link {
+  text-decoration: none;
+  font-style: oblique;
+}
+
+.mainAside {
+  width: 300px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 3%;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-color: var(--flat_blue);
+}
+
+aside img{
+  max-width: 100%;
+  margin-left: 0;
+}
+
+aside p{
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  color: var(--slight_grey);
+}
+
+aside .founderSplash {
+  width: 100%;
+}
+
+aside .link {
+  text-decoration: none;
+  font-style: normal;
+  color: var(--slight_grey);
+  font-size: 1.2em;
+}
+
+aside .founderpics{
+  display: flex;
+}
+
+main .sidebar {
+  max-width: 310px;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 1%;
+  padding-right: 1.5%;
+}
+
+
+/*
+Text for the founders bio is set to justify on desktop for presentation, which differs from mobile.
+
+*/
+
+.founders {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: var(--greyed_out);
+}
+
+
+.founders p {
+  text-align: justify;
+
+}
+
+.founders h3 {
+  text-align: center;
+}
+
+.founder_box {
+  background-color: var(--greyed_out);
+  margin: 4%;
+  margin-top: 5%;
+  width: 25%;
+}
+
+
+
+body {
+    margin: 0;
+}
+
+
+/*
+The text-embedded links change when hovered over everywhere apart from header and sidebar.
+*/
+
+p a:link { color: var(--slight_grey); font-style: normal;}
+p a:visited { color: var(--slight_grey);}
+p a:hover {color: var(--text_A_translucent);}
+.mainAside p a:hover{color: var(--slight_grey);} 
+
+
+
+/*
+Identical to mobile style
+*/
+
+footer a:link { font-style: italic;}
+
+footer {
+    padding: 0.5em 3%;
+    margin: 5% 0 2% 0;
+  }
+
+footer p {
+    margin: 0;
+    text-align: center;
+    color: var(--slight_grey);
+}
+
+
+
+
+html{
+  background-color: var(--bkgrd_main);
+}
+
+
+/*
+This is the styling required to get the navigation bar to look how was required by the design document.
+
+As the HTML code was written with divs that are designed to accomodate a dropdown menu, and because 
+this is mobile-first, the names do not entirely match what is being altered.
+*/
+
+.link {font-style: italic;}
+.menuButton {display: none;}
+.dropdown-menu {background-color: aqua;}
+.dropdown-menu a:link { color: white; }
+.dropdown-menu a:visited { color: white; }
+.dropdown-menu a:hover { color: purple; }
+.dropdown-menu {
+  margin: 0;
+  padding: 5px 5%;
+  background-color: rgb(45, 149, 180) ;
+  font-size: 1.1em;
+  text-align: center;
+}
+.dropdown-menu{
+  margin: 0%;
+  padding: 2%;
+  list-style: none;
+}
+
+.dropdown-content a {
+  border-style: none none none solid;
+  display: inline;
+  padding-top: 2.1%;
+  padding-bottom: 2.1%;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  outline: none;
+}
+
+
+
+
+/*
+the class 'wrapcontact' does not exist here and 'comment' has a width of 150px so it fills the screen more, 
+but otherwise this is identical to mobile style. 
+
+the class 'contactaside' has been added to change the width of the aside element without affecting the 
+mobile styling.
+*/
+
+.formcontent{
+  background-color: var(--greyed_out);
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.comment{
+  height: 150px;
+  width: 100%;
+}
+
+.contactaside{
+  width: 20%;
+}
+
+
+
+
+
+/*
+There are some very slight changes in this styling compared to mobile style.
+
+Margins are changed to percentages rather than 'auto', and width restrictions are removed.
+*/
+
+.newsButton {
+  background-color: var(--greyed_out);
+  color: var(--slight_grey);
+  padding: 3%;
+  font-size: 1em;
+  border: none;
+  margin-left: 3%;
+  width: 100%;
+}
+
+
+.allstories {
+  display: inline-block;
+  width: 60%;
+}
+
+.storyText {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.storyText p {
+  color: var(--slight_grey);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.allstories:hover .storyText {display: block;}
+
+.allstories:hover .newsButton {background-color: #085391; color: white;}
+
+.news{
+  flex-flow: column nowrap;
+}
+
+.articles{
+  background-color: var(--greyed_out);
+  padding: 0;
+  margin: 2%;
+}
+
+
+
+.allstories img{
+  max-width: 100%;
+  display: block;
+  margin-right: auto;
+  margin-left: 3%;
+}
+
+.story {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: var(--greyed_out);
+}
+
+.allstories h1{
+  font-size: 1.8em;
+}
+
+
+
+
+/*
+This is all the styling for the game page, with different output area elements being styled.
+
+Additionally, the buttons and canvas for mobile and tablet screens are hidden as they will not be used.
+*/
+
+#startButtonDesktop {
+  margin-left: 10%;
+  flex-wrap: nowrap;
+  display: flex;
+}
+
+#instructions {
+  margin: 3% 10% 3% 10%;
+  padding: 0;
+}
+
+#output_area {
+  margin: 3% 7% 3% 7%;
+}
+
+#demo {
+  margin: 3% 0% 0% 7%;
+}
+
+#guessarea{
+  margin: 0% 0% 0% 7%;
+}
+
+#gameAreaDesktop {
+  background-color: var(--greyed_out);
+  margin: 0 10% 0 10%;
+}
+
+#gameAreaMobileSmall {
+  display: none;
+}
+
+#gameAreaMobileMedium {
+  display: none;
+}
+
+#startButtonMobileSmall {
+  display: none;
+}
+
+#startButtonMobileMedium {
+  display: none;
+}

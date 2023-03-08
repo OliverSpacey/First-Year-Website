@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="cssFiles/mobileStyles.css" media="screen and (max-width: 799px)">
+    <link rel="stylesheet" href="cssFiles/largeScreenStyles.css" media="screen and (min-width: 800px)">
+    <title>Assignment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id ="wrapper">
+
+        <header><a href="index.html"><img src="images/logo11.png" alt="The logo for DAD, a dojo with the letters 'DAD' inside it"></a><h1><a href="index.html">Digital Assessment Dojo</a></h1></header>
+        <div class="dropdown-menu">
+            <button class="menuButton">Menu</button>
+            <div class="dropdown-content">
+              <a href="index.html">Home</a>
+              <a href="founders.html">About us</a>
+              <a href="news.html">News</a>
+              <a href="game.html">Game</a>
+              <a href="contact.html">Contact us</a>
+            </div>
+          </div>
+
+
+        <!--
+        The main class here allows the entire page to be altered so that it behaves the same on mobile and desktop.
+        Within the main class there are 3 article classes, called 'articles'. These contain all of the content for each article in one place and 
+        prevent elements from scattering around the page when changing styling. 
+
+        In each article there is the title, image, a button, and the text of the article. The button that displays the text on the screen functions 
+        in the same way as the dropdown menu button - requiring a hover or press to activate. For these articles, there is a button that clearly 
+        shows how the story can be shown, or alternatively the image can be selected to display the text.
+        -->
+        <main class="news">
+            <h1>News</h1>
+            <article class="articles">
+                <h2>DAD wins award</h2>
+                <div class="allstories">
+                    <img src="images/award_photo.jpeg" alt="DAD given award to recognise their efforts in the children's game development industry">
+                    <button class="newsButton">See story...</button>
+                    <div class="storyText">
+                        <p>
+                            DAD has been awarded the 'Best Children's Game Company of The Year' award, adding another commendation to our list! 
+                            This comes after DAD spent the year working entirely from home, with no contact with anyone not in their individual bubbles. 
+                            The year has been incredibly tough for everyone and this award helps recognise the incredible work our team has done over the 
+                            last 12 months, and demonstrates our committment to providing quality experiences no matter the circumstances.
+                        </p>    
+                    </div>
+                </div>
+            </article>
+            <article class="articles">
+                <h2>CEO visits children in Ghana</h2>
+                <div class="allstories">
+                    <img src="images/ghana_children.jpeg" alt="An image of the children Oliver met in Ghana">
+                    <button class="newsButton">See story...</button>
+                    <div class="storyText">
+                        <p>
+                            Earlier this year our CEO, Oliver Spacey, visited a small village in Ghana where he handed out iPads to the 
+                            children there in an effort to aid their ability to use virtual learning tools. 
+                            This came after children across the world were denied true educational experiences as a result of covid, with many 
+                            children missing entire years worth of work. Oliver hoped that by providing these children with iPads, they would 
+                            be able to work from home and make up for the work they had missed. Tablets have also given these children the opportunity 
+                            enhance the learning they were recieving previously, adding many more elements to it through a virtual environment.
+
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="articles">
+                <h2>Major office relocation</h2>
+                <div class="allstories">
+                    <img src="images/thevicarage.jpeg" alt="The vicarage, our new office, on a beautiful morning">
+                    <button class="newsButton">See story...</button>
+                    <div class="storyText">
+                        <p>
+                            The main office for DAD has been officially moved from our previous address in Wellingborough to a new one 
+                            in a small village in Yorkshire. The office is actually a new house! It's the old vicarage of the town, and so 
+                            holds some significance in the local community. But, the opportunity to use such a beautiful and remote location 
+                            with so much history as our base of operations was too great to pass up. We are certain that this new location
+                            will provide us with abundant opportunity to create the great games and experiences we always have, but now with
+                            the added charm of the English countryside in them all!
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <footer><p>© Oliver Spacey, 2021 <a class="link" href="accessibility.html">Accessibility</a></footer>
+    </div>
+</body>
+

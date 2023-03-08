@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="cssFiles/mobileStyles.css" media="screen and (max-width: 799px)">
+    <link rel="stylesheet" href="cssFiles/largeScreenStyles.css" media="screen and (min-width: 800px)">
+    <title>Assignment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id ="wrapper">
+        <header><a href="index.html"><img src="images/logo11.png" alt="The logo for DAD, a dojo with the letters 'DAD' inside it"></a><h1><a href="index.html">Digital Assessment Dojo</a></h1></header>
+        <div class="dropdown-menu">
+            <button class="menuButton">Menu</button>
+            <div class="dropdown-content">
+              <a href="index.html">Home</a>
+              <a href="founders.html">About us</a>
+              <a href="news.html">News</a>
+              <a href="game.html">Game</a>
+              <a href="contact.html">Contact us</a>
+            </div>
+          </div>
+        <main>
+
+            <!--
+            This is where the form for contacting and information on how to achieve this is kept.
+
+            The entire form section is contained within a div class 'wrapcontact', this ensures that the elements in the class are kept together when the page 
+            wraps. Additionally, the textarea section of the form has the class 'comment' which alters the height and width of the box depending on the window 
+            size, and prevents the box from overlapping with anything or disappearing off the screen.
+            -->
+            <div class="wrapcontact">
+                <h1>Contact us</h1>
+                <p>If you would like to contact us please use the form below and we will get back to you as soon as possible.</p>
+                <form id="contactForm" action="https://www.dcs.shef.ac.uk/cgi-intranet/public/FormMail.php" method="POST"  class="formcontent">
+                    <input type="hidden" name="recipients" value="ohmspacey1@sheffield.ac.uk">
+                    <p>
+                        <label for="GET-name">Name:</label>
+                        <input id="GET-name" type="text" name="name" placeholder="type your name here..." maxlength="40" size="30">
+                    </p>
+                    <p>
+                        <label for="myemail">Your e-mail:</label>
+                        <input type="email" name="myemail" id="myemail" placeholder="type your email here..." maxlength="40" size="20" required>
+                    </p>   
+                    <p>
+                        <textarea name="comments" class="comment" placeholder="type your comments here..."></textarea>
+                        <br>
+                        <input type="submit" value="Submit form">
+                    </p>
+                </form>
+                <p>Alternatively, you can contact us directly or in-person via our office at:<br><strong>The Vicarage, Church Causeway, Bath Spa, Wetherby LS23 7AE</strong></p>
+            </div>
+            <aside class="contactaside">
+                <p>Our team is working as hard as they can given the current climate due to the effect of the COVID-19 pandemic, however response times may be longer than we would like as a result. We hope you can understand and remain patient with us while we work to maintain consistent response times.</p>
+            </aside>
+        </main>
+        <footer><p>© Oliver Spacey, 2021 <a class="link" href="accessibility.html">Accessibility</a></footer>
+    </div>
+</body>

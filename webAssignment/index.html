@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="cssFiles/mobileStyles.css" media="screen and (max-width: 799px)">
+    <link rel="stylesheet" href="cssFiles/largeScreenStyles.css" media="screen and (min-width: 800px)">
+    <title>Assignment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <!--The div element 'wrapper' allows the body of the website to be altered separate from the 'body' element, and as it 
+    is an id element, it has higher priority with CSS rules than other elements, so the style will remain consistent throughout.
+
+    Additionally, on each page the website title 'Digital Assessment Dojo' itself acts as a link to the home page, hence the link below.-->
+    <div id ="wrapper">
+        <header><a href="index.html"><img src="images/logo11.png" alt="The logo for DAD, a dojo with the letters 'DAD' inside it"></a><h1><a href="index.html">Digital Assessment Dojo</a></h1></header>
+
+        <!--This is the dropdown menu i used.
+        
+        I have altered this dropdown menu from what is shown in the tutorial cited in design document so that the class names make sense with what is happening on the page-->
+        <div class="dropdown-menu">
+            <button class="menuButton">Menu</button>
+            <div class="dropdown-content">
+              <a href="index.html">Home</a>
+              <a href="founders.html">About us</a>
+              <a href="news.html">News</a>
+              <a href="game.html">Game</a>
+              <a href="contact.html">Contact us</a>
+            </div>
+          </div>
+
+
+        <main>
+            <div class="homePage">
+                <h1>Home</h1>
+                <p>Welcome to Digital Assessment Dojo! (DAD for short) Please check out 'News' for information on our latest events, and if you want to contact our team then head over to the 'Contact us' page for info on how to do that!</p>
+                <br>
+                <h2>Our mission:</h2>
+                <p>Our mission at DAD is simple, we want to deliver quality, fun, and engaging games and puzzles for children worldwide. To achieve this, we take full advatange of our team of experts in their respective fields (information on the team can be found on 'About us', or by <a class="link" href="founders.html">clicking here</a>).</p>
+                <br>
+                <h2>Games and puzzles:</h2>
+                <p>Our games and puzzles are the perfect learning tool for any child, and have been carefully and lovingly crafted by our team to be fun and practical!</p>
+                <p>We believe companies like ourselves should ensure that both they, and the content they produce, is universally recognised, free to use, and trustworthy. Without these key characteristics, how can there be any certainty that your child is getting the tools they need? That is why we are proud to say we are all of those and more! Our team works day and night to create fun, engaging, and useful learning tools for children of all ages. One of these can be found in the 'Game' section from the navigation bar, sidebar, or by <a class="link" href="game.html">clicking here</a>.</p>
+
+            </div>
+
+            <!--
+            This sidebar acts to show off the other pages of the website from the home page and provide links to them.
+            
+            The sidebar will display at the bottom of the page on mobile and tablets (breakpoint at 800px) and display along 
+            the side on a desktop screen (at any point over 800px).
+        
+            Additionally, the sidebar class contains 3 of the aside class "mainAside", which contains the content for each item 
+            in the sidebar - e.g. the news section + the picture. So while the div class "sidebar" contains the three items (news, 
+            about us, and the game), the aside class "mainAside contains the content for each".
+
+            Using two different classes was especially important as I wanted to ensure the sidebar was displayed properly on mobile and 
+            desktop devices (top to bottom on desktop, and left to right on mobile), but also as i wanted there to be a separation between 
+            each item on desktop so the sidebar looked like it blended in better with the rest of the page.
+            -->
+            <div class="sidebar">
+                <aside class="mainAside">
+                    <h2>Check out our latest news story!</h2>
+                    <p><a class="link" href="news.html">DAD wins award!</a></p>
+                    <a class="link" href="news.html"><img src="images/award_photo.jpeg" alt="image of an award, a trophy"></a>
+                </aside>
+
+                <aside class="mainAside">
+                    <h2>Meet the team!</h2>
+                    <div class="founderSplash">
+                        <p><a class="link" href="founders.html">Read their bios:</a></p>
+                        <div class="founderpics">
+                            <a class="link" href="founders.html"><img src="images/my_face.jpeg" alt="An image of the founder, Oliver Spacey"></a>
+                            <a class="link" href="founders.html"><img src="images/media_manager.jpeg" alt="An image of the media manager, Diane Murdoch"></a>
+                            <a class="link" href="founders.html"><img src="images/lead_programmer.jpeg" alt="An image of the lead programmer, John Doe"></a>
+                        </div>
+                    </div>
+                    
+                </aside>
+                <aside class="mainAside">
+                    <h2>Try out our game!</h2>
+                    <p><a class="link" href="game.html">Interactive game:</a></p>
+                    <a class="link" href="game.html"><img src="images/gameScreenshot.png" alt="A screenshot of the game available to play on the game page"></a>
+                </aside>
+
+            </div>
+
+        </main>
+        <footer><p>© Oliver Spacey, 2021 <a class="link" href="accessibility.html">Accessibility</a></footer>
+    </div>
+</body>

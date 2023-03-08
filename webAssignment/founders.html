@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="cssFiles/mobileStyles.css" media="screen and (max-width: 799px)">
+    <link rel="stylesheet" href="cssFiles/largeScreenStyles.css" media="screen and (min-width: 800px)">
+    <title>Assignment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id ="wrapper">
+        <header><a href="index.html"><img src="images/logo11.png" alt="The logo for DAD, a dojo with the letters 'DAD' inside it"></a><h1><a href="index.html">Digital Assessment Dojo</a></h1></header>
+        <div class="dropdown-menu">
+            <button class="menuButton">Menu</button>
+            <div class="dropdown-content">
+              <a href="index.html">Home</a>
+              <a href="founders.html">About us</a>
+              <a href="news.html">News</a>
+              <a href="game.html">Game</a>
+              <a href="contact.html">Contact us</a>
+            </div>
+          </div>
+
+
+        <!--
+        Below is the main part of the founders section, which contains several div classes.
+        The first of these classes is the div that contains all the images and bios for the founders, called 'founders'. This ensures that the 
+        content of the founders page wraps according to whether the page is on mobile or desktop.
+    
+        Each bio and picture is contained within another div class 'founder_box', which allows for styling decisions separate from the rest of the 
+        page.
+        -->
+        <main>
+            <div>
+                <h1>About us</h1>
+                <p>Note: all profile information included is fictitious and any relation to a real person is entirely unintentional. Pictures used for Media manager and Lead programmer are from thispersondoesnotexist.com and thus are not of real people, and are free to use.</p>
+                <h2>Meet the team!</h2>
+                <div class="founders">
+                    <div class="founder_box">
+                        <h3>Founder/CEO</h3>
+                        <img src="images/my_face.jpeg" alt="Oliver Spacey, founder/CEO">
+                        <p>As early as the age of 12 Oliver was helping his younger brothers with their school work, often acting as their tutor. This was the earliest example of Oliver's desire to help those he could, and sparked his love for tutoring. In the years that followed, Oliver would spend much of his time aiding his brothers and helping them understand their work, making every effort to ensure the work was as interesting as possible.</p>
+                    </div>
+                    <div class="founder_box">
+                        <h3>Media manager</h3>
+                        <img src="images/media_manager.jpeg" alt="Diane Murdoch, media manager">
+                        <p>Meet Diane Murdoch, our media manger. She spent many years as a social media manager at companies like google and apple before coming to DAD with the hopes of using her expertise to help children. Her unique way of managing social media allows for effective engagement with the userbase and ensures a constant line of communication between DAD and those we serve to help.</p>
+                    </div>
+                    <div class="founder_box">
+                        <h3>Lead programmer</h3>
+                        <img src="images/lead_programmer.jpeg" alt="John Doe, lead programmer">
+                        <p>John spent much of his childhood working on his father's computer, playing around with whatever he could. From as early as he could read and write he was programming as much as his imagination would allow. Since John developed his skills for programming he has been making games for his friends, always with fun in mind and never taking himself too seriously. This allowed him to gain a special talent for making engaging and honest-feeling games, suitable for children of any age.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer><p>© Oliver Spacey, 2021 <a class="link" href="accessibility.html">Accessibility</a></footer>
+    </div>
+</body>

@@ -1,0 +1,485 @@
+:root {
+    --text_A: rgb(49,68,49);
+    --bkgrd_A: rgba(61, 159, 204, 0.2);
+    --text_A_translucent: rgba(61, 159, 204, 0.85);
+    --greyed_out: rgba(0,0,0,0.3);
+    --button_background: #0d88b9;
+    --button_hover: #085391;
+    --shadow: rgba(0,0,0,0.2);
+    --header_ctrl: rgb(255, 255, 36);
+    --slight_grey: rgba(255, 255, 255, 0.904);
+    --bkgrd_main: rgb(192, 0, 118);
+    --flat_blue: rgb(45, 149, 180);
+  }
+
+
+
+/*
+These styling choices for the header all ensure that the top bar containing the website name is formatted correctly 
+for the rest of the page.
+
+On mobile, the company name remains hidden to keep the site from feeling cramped.
+*/
+header {
+  padding: 0.5em 3%;
+  background-color: var(--header_ctrl);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
+header h1 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+header img {
+  width: 30%;
+}
+
+header h1 a{
+text-decoration: none;
+color: black;
+}
+
+
+
+/*
+This tweakpoint alters the font size of the header to ensure that the website name doesn't wrap onto two lines 
+and take up more room than is necessary.
+*/
+
+@media screen and (max-width: 550px){
+  header h1{
+    font-size: 1.5em;
+  }
+}
+
+
+
+
+
+/*
+The following are all the styling changes for the main element, which contains the bulk of the elements on each of 
+the pages. Thus, most of the significant changes are done here.
+
+The first establishes the kind of flex wrapping that the page will follow, ensuring elements on the screen behave as 
+required according to the design document. This means each element in main must be displayed as a column, one on-top 
+of the other (flex-flow: column wrap; achieves this).
+
+Additionally, the background colour of the website and colour of the font is assigned. Each font size and space of 
+padding is added to the elements as well. The main img changes are to ensure that the images in 'founders.html' are 
+positioned correctly on the page.
+*/
+main {
+  overflow: hidden;
+  margin: 0;
+  padding: 0.5rem 3%;
+  background-color: var(--bkgrd_main);
+  display: flex;
+  flex-flow: column wrap;
+  color: var(--slight_grey);
+}
+
+main h1 {
+  font-size: 1.5em;
+  padding: 0 3%;
+}
+
+main h2 {
+  font-size: 1.4em;
+  padding: 0 3%;
+}
+
+main h3 {
+  font-size: 1em;
+  padding: 0 3%;
+}
+
+main p {
+  padding: 0 3%;
+}
+
+main aside {
+  background-color: var(--greyed_out);
+  padding: 0.5rem 1%;
+  font-size: 0.8em;
+}
+
+main img {
+  max-width: 30%;
+  margin-left: 35%;
+}
+
+
+/*
+All aside changes defined below refer to the aside elements in the contact page and the home page (contact.html, and index.html).
+
+The 'mainAside' class is an aside class on the home page that the design stated should have a blue background, hence the colour 
+change, while
+*/
+
+
+.mainAside {
+  width: 32%;
+  background-color: var(--flat_blue);
+}
+
+aside img{
+  max-width: 100%;
+  display: block;
+  margin-right: auto;
+  margin-left: 0%;
+}
+
+aside .link {
+  text-decoration: none;
+  font-style: normal;
+  color: var(--slight_grey);
+}
+
+aside p{
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  font-size: 0.8em;
+  font-style: normal;
+}
+
+aside h2{
+  text-align: center;
+  margin: auto;
+  font-size: 1.2em;
+  margin-bottom: 15%;
+}
+
+aside .founderSplash {
+  margin-top: 25%;
+}
+
+.sidebar {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.founderpics {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  align-items: center;
+}
+
+
+
+
+/*
+These changes relate to the founders 'about us' page (founders.html), they allow the images and bios to be displayed 
+vertically, with each bio + picture showing on top of the next on mobile, and side-by-side on desktop.
+*/
+
+.founders h3, .founders p{
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  
+}
+
+.founders {
+  display: flex;
+  flex-direction: column;
+}
+
+.founders div {
+  margin-bottom: 5%;
+}
+
+.founder_box{
+  background-color: var(--greyed_out);
+  width: 80%;
+  align-self: center;
+}
+
+
+
+
+body {
+  margin: 0;
+}
+
+
+
+/*
+This aids in making the link for the game in the home page in the paragraph talking about the companies' games 
+look how is intended.
+*/
+
+p a:link { color: var(--slight_grey); font-style: normal;}
+p a:visited { color: var(--slight_grey);}
+p a:hover {color: var(--text_A_translucent);}
+
+
+
+/*
+This alters the link to accessiblity in the footer of each page, and the rest of the text around it.
+*/
+
+footer a:link {font-style: italic;}
+
+footer {
+  padding: 0.5em 3%;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+  color: var(--slight_grey);
+}
+
+
+
+
+#wrapper {
+  background-color: var(--bkgrd_main);
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+
+html{
+  background-color: var(--bkgrd_main);
+}
+
+
+/*
+Below is the set of classes needed to make the dropdown menu work.
+
+First class is the button itself, which operates when hovered over. dropdown-content remains 
+hidden until this button is hovered over, at which point it is displayed, showing the options 
+for the other pages.
+
+Each link has the variable 'greyed_out' applied to it on hover, which clearly shows the user which 
+they have selected, along with the page details when they are redirected.
+*/
+
+.menuButton {
+  background-color: #0d88b9;
+  color: white;
+  padding: 30%;
+  font-size: 1em;
+  border: none;
+}
+
+.dropdown-menu {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-menu:hover .dropdown-content {display: block;}
+
+.dropdown-menu:hover .menuButton {background-color: #085391;}
+
+.dropdown-content a:hover {background-color: var(--greyed_out);}
+
+
+
+
+/*
+These are the styling choices for the contact page, first is the class that allows the forms and text info 
+to be displayed virtically alongside the 'aside' section. To do this, a separate div class with a flex 
+direction of column was required.
+*/
+
+.wrapcontact{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 80%;
+  
+}
+
+.formcontent{
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+
+.comment {
+  height: 100px;
+  width: 100%;
+}
+
+
+
+/*
+The newsButton class is for the 'see story...' tab that appears beneath each image in the news section. 
+
+Each of these buttons in the page operates in the same way to the dropdown menu in the rest of the pages 
+except displays purely text, rather than a list of links.
+*/
+
+.newsButton {
+  background-color: var(--greyed_out);
+  color: var(--slight_grey);
+  padding: 3%;
+  font-size: 1em;
+  border: none;
+  width: 100%;
+}
+
+
+.allstories {
+  display: inline-block;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.storyText {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px var(--shadow);
+  z-index: 1;
+  margin-right: 20%;
+}
+
+.storyText p {
+  color: var(--slight_grey);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: justify;
+}
+
+.allstories:hover .storyText {display: block;}
+
+.allstories:hover .newsButton {background-color: var(--button_hover); color: white;}
+
+.news{
+  flex-flow: column nowrap;
+}
+
+.articles{
+  background-color: var(--greyed_out);
+  padding: 3%;
+  margin: 2%;
+}
+
+.allstories img{
+  max-width: 100%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+
+/*
+As this is the default stylesheet (mobile sheet) all buttons and canvas that aren't activated via a media 
+query must be disabled so as to not interfere with the web page, which is what the 6 id's below do.
+*/
+
+#gameAreaMobileMedium {
+  background-color: var(--greyed_out);
+  margin: 0 10% 0 10%;
+}
+
+#gameAreaDesktop {
+  display: none;
+}
+
+#gameAreaMobileSmall {
+  display: none;
+}
+
+#startButtonMobileSmall {
+  display: none;
+}
+
+#startButtonDesktop {
+  display: none;
+}
+
+#startButtonMobileMedium {
+  display: block;
+}
+
+
+
+
+/*
+This tweakpoint prevents certain issues fron occuring when the screen size gets too small,
+like on an iPhone SE where the screen is 320 pixels in width.
+
+Additionally, the game canvas and button is changed at this screen width to ensure no elements 
+appear off the screen, and everything wraps accordingly.
+*/
+@media screen and (max-width: 500px){
+  main aside{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .wrapcontact{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+
+  form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .comment{
+    height: 80px;
+    width: 150%;
+  }
+
+  aside .founderSplash {
+    margin-top: auto;
+  }
+
+  header h1 {
+    display: none;
+  }
+
+
+  #gameAreaMobileSmall {
+    display: block;
+    background-color: var(--greyed_out);
+    margin-left: 4%;
+  }
+
+  #gameAreaMobileMedium {
+    display: none;
+  }
+
+  #startButtonMobileSmall {
+    display: block;
+  }
+
+  #startButtonMobileMedium {
+    display: none;
+  }
+
+}
